@@ -10,7 +10,7 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    button = types.KeyboardButton(text="🛍 Открыть магазин", web_app=WebAppInfo(url="https://oscurotienda.com"))
+    button = types.KeyboardButton(text="🛍 Открыть магазин", web_app=WebAppInfo(url="https://trh-dt.github.io/Oscuro_Tienda/index.html"))
     keyboard.add(button)
     await message.answer("Привет! Добро пожаловать в Oscuro Tienda", reply_markup=keyboard)
 
