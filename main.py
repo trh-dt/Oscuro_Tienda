@@ -34,7 +34,6 @@ async def shop(message: types.Message):
 async def main():
     logging.basicConfig(level=logging.INFO)
     await bot.delete_webhook(drop_pending_updates=True)
-    dp.include_router(dp)  # <-- Убедись, что этот вызов добавляет роутеры
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
