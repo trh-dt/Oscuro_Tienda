@@ -1,19 +1,44 @@
+import asyncio
+import logging
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import WebAppInfo
-from aiogram.utils import executor
 
 TOKEN = "7913005358:AAG-SomQHx37Z4xBFVy5KyufSskFhYA2Y9w"
 
 bot = Bot(token=TOKEN)
-dp = Dispatcher(bot)
+dp = Dispatcher()
 
-@dp.message_handler(commands=['start'])
+# Команда /start
+@dp.message(commands=['start'])
 async def start(message: types.Message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    button = types.KeyboardButton(text="🛍 Открыть магазин", web_app=WebAppInfo(url="https://trh-dt.github.io/Oscuro_Tienda/index.html"))
+    button = types.KeyboardButton(
+        text="🛍 Открыть магазин",
+        web_app=WebAppInfo(url="https://ТВОЙ_GITHUB_НИК.github.io/oscuro-tienda/")
+    )
     keyboard.add(button)
-    await message.answer("Привет! Добро пожаловать в Oscuro Tienda", reply_markup=keyboard)
+    await message.answer("Привет! Добро пожаловать в Oscuro Tienda!", reply_markup=keyboard)
+
+# Inline-кнопка (если нужна встроенная)
+@dp.message(commands=['shop'])
+async def shop(message: types.Message):
+    keyboard = types.InlineKeyboardMarkup()
+    button = types.InlineKeyboardButton(
+        text="🛍 Перейти в магазин",
+        web_app=WebAppInfo(url="https://trh-dt.github.io/Oscuro_Tienda/index.html")
+    )
+    keyboard.add(button)
+    await message.answer("Добро пожаловать в Oscuro Tienda!", reply_markup=keyboard)
+
+async def main():
+    logging.basicConfig(level=logging.INFO)
+    await bot.delete_webhook(drop_pending_updates=True)
+    dp.include_router(dp)
+    await dp.start_polling(bot)
 
 if __name__ == "__main__":
-    from aiogram import executor
-    executor.start_polling(dp)
+    asyncio.run(main())
+    
+    
+    #https://trh-dt.github.io/Oscuro_Tienda/index.html
+    #7913005358:AAG-SomQHx37Z4xBFVy5KyufSskFhYA2Y9w
