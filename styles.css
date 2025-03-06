@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +11,14 @@
 body{
     background-color: #000000;
     color: aliceblue;
+    background-color: #000000;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            padding: 20px;
 }
 
 header{
@@ -97,6 +107,71 @@ header{
     align-items: center;
     border-radius: 13px;
 }
+
+
+
+
+
+
+
+
+
+.product-card {
+    background: #000000;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.product-card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+.product-image {
+    width: 80%;
+    height: 60%;
+    background: #33333364;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Prompt;
+}
+.product-price {
+    font-size: 16px;
+    color: #999696;
+    margin-top: 5px;
+    background: none;
+    border: 1px solid #000000;
+    cursor: pointer;
+    font-family: Prompt;
+}
+
+.product-card:active {
+    animation: clickAnimation 0.2s ease-in-out;
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 
 
 /* Адаптив для планшетов */
