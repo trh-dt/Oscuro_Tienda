@@ -17,7 +17,7 @@ dp = Dispatcher()
 # Главное меню (Reply-клавиатура)
 menu_keyboard = ReplyKeyboardMarkup(
     keyboard=[
-        [KeyboardButton(text="🛍 Открыть магазин", web_app=WebAppInfo(url="https://trh-dt.github.io/Oscuro_Tienda/index.html"))],
+        [KeyboardButton(text="✅ Открыть магазин", web_app=WebAppInfo(url="https://trh-dt.github.io/Oscuro_Tienda/index.html"))],
         [KeyboardButton(text="📦 Каталог"), KeyboardButton(text="ℹ️ Помощь")],
         [KeyboardButton(text="📞 Контакты")]
     ],
@@ -27,7 +27,7 @@ menu_keyboard = ReplyKeyboardMarkup(
 # Inline-кнопки (для быстрого доступа)
 shop_inline_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="🛍 Перейти в магазин", web_app=WebAppInfo(url="https://trh-dt.github.io/Oscuro_Tienda/index.html"))],
+        [InlineKeyboardButton(text="✅ Перейти в магазин", web_app=WebAppInfo(url="https://trh-dt.github.io/Oscuro_Tienda/index.html"))],
         [InlineKeyboardButton(text="📦 Каталог", callback_data="catalog"), InlineKeyboardButton(text="📞 Контакты", callback_data="contacts")]
     ]
 )
@@ -40,7 +40,7 @@ async def start(message: types.Message):
 # Обработка кнопки "Каталог"
 @dp.message(lambda message: message.text == "📦 Каталог")
 async def catalog(message: types.Message):
-    await message.answer("🛍 Каталог товаров:\n🔹 Чехлы\n🔹 Аксессуары\n🔹 Футболки с принтами\n\nСкоро добавим больше товаров!", reply_markup=shop_inline_keyboard)
+    await message.answer("🗃️ Каталог товаров:\n♻️ Чехлы\n♻️ Аксессуары\n♻️ Футболки с принтами\n♻️Худи с принтами\nСкоро добавим больше товаров!", reply_markup=shop_inline_keyboard)
 
 # Обработка кнопки "Контакты"
 @dp.message(lambda message: message.text == "📞 Контакты")
@@ -50,7 +50,7 @@ async def contacts(message: types.Message):
 # Обработка кнопки "Помощь"
 @dp.message(lambda message: message.text == "ℹ️ Помощь")
 async def help_cmd(message: types.Message):
-    await message.answer("ℹ️ Как пользоваться ботом?\n\n1️⃣ Нажмите \"🛍 Открыть магазин\" – чтобы перейти в веб-приложение.\n2️⃣ Нажмите \"📦 Каталог\" – чтобы посмотреть список товаров.\n3️⃣ Нажмите \"📞 Контакты\" – для связи с поддержкой.\n\nПриятных покупок!")
+    await message.answer("ℹ️ Как пользоваться ботом?\n\n1️⃣ Нажмите \"✅ Открыть магазин\" – чтобы перейти в веб-приложение.\n2️⃣ Нажмите \"📦 Каталог\" – чтобы посмотреть список товаров.\n3️⃣ Нажмите \"📞 Контакты\" – для связи с поддержкой.\n\nПриятных покупок!")
 
 # Обработчик callback-кнопок
 @dp.callback_query()
@@ -58,7 +58,7 @@ async def handle_callback(callback: types.CallbackQuery):
     if callback.data == "catalog":
         await callback.message.answer("📦 Каталог: https://t.me/your_bot?start=shop")
     elif callback.data == "contacts":
-        await callback.message.answer("📞 Контакты:\nТелеграм: @support\nInstagram: @oscurotienda")
+        await callback.message.answer("📞 Контакты:\nТелеграм: @estilo_01")
 
 async def main():
     logging.basicConfig(level=logging.INFO)
