@@ -45,7 +45,7 @@ async def catalog(message: types.Message):
 # Обработка кнопки "Контакты"
 @dp.message(lambda message: message.text == "📞 Контакты")
 async def contacts(message: types.Message):
-    await message.answer("📞 Контакты:\nТелеграм: @support\nInstagram: @oscurotienda")
+    await message.answer("📞 Контакты:\nТелеграм: @estilo_01")
 
 # Обработка кнопки "Помощь"
 @dp.message(lambda message: message.text == "ℹ️ Помощь")
