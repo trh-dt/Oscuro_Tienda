@@ -11,6 +11,7 @@ load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")  # Теперь токен берётся из .env файла
 
 # Создаём бота
+print(f"TOKEN: {TOKEN}")  # Проверяем, что токен загружен
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
