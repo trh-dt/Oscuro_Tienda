@@ -13,7 +13,7 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #000;
+    background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,19 +35,18 @@
 
 body{
     background-color: #000000;
-    color: aliceblue;
-    background-color: #000000;
-            color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 16px;
-            padding: 20px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
 }
 
 header{
-    background-color: #000000;
+    background-color: #ffffff;
     height: 50vh;
 }
 
@@ -78,7 +77,7 @@ header{
 .menu_list{
     padding: 10px;
     text-decoration: none;
-    color: azure;
+    color: rgb(0, 0, 0);
     font-family: Prompt;
     font-size: 20px;
 }
@@ -101,48 +100,19 @@ header{
     font-size: 80px;
 }
 
-.product_section_1{
+.product_table
+{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-
-.product_list_1{
-    width: 49vw;
-    height: 360px;
-    background-color: rgba(38, 38, 38, 0.498);
-    margin-top: 47px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 13px;
-}
-
-.product_section_2{
-    display: flex;
-    justify-content: space-around;
-}
-
-.product_list_2{
-    width: 32.5vw;
-    height: 360px;
-    background-color: rgba(38, 38, 38, 0.498);
-    margin-top: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 13px;
-}
-
-
-
-
-
-
-
 
 
 .product-card {
-    background: #000000;
+    background: #ffffff;
+    border: solid 1px #000000;
     width: 250px;
     height: 350px;
     display: flex;
@@ -155,9 +125,7 @@ header{
     cursor: pointer;
     transition: box-shadow 0.3s ease-in-out;
 }
-.product-card:hover {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-}
+
 .product-image {
     width: 80%;
     height: 60%;
@@ -171,13 +139,18 @@ header{
     font-family: Prompt;
 }
 .product-price {
-    font-size: 16px;
-    color: #999696;
+    font-size: 23px;
+    color: #000000;
     margin-top: 5px;
     background: none;
-    border: 1px solid #000000;
     cursor: pointer;
     font-family: Prompt;
+}
+
+button {
+    all: unset; /* Убирает ВСЕ стили */
+    display: inline-block; /* Чтобы кнопка не исчезла */
+    cursor: pointer; /* Добавляем указатель */
 }
 
 .product-card:active {
@@ -224,6 +197,11 @@ header{
 
 /* Адаптив для телефонов */
 @media (max-width: 768px) {
+
+    header{
+        height: 40vh;
+    }
+
     .title_1 {
         font-size: 50px;
         margin: 20px;
@@ -234,15 +212,9 @@ header{
         margin-top: -58px;
     }
     
-    .product_section_1, .product_section_2 {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .product_list_1, .product_list_2 {
-        width: 90vw;
-        height: 250px;
-        margin-top: 20px;
+    .product-card {
+        max-width: 150px;
+        height: 240px;
     }
     
     .menu {
