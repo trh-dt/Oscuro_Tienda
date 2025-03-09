@@ -56,8 +56,8 @@ header{
 }
 
 .icon_logo{
-    max-width: 40px;
-    height: 40px;
+    max-width: 60px;
+    height: 60px;
     margin: 15px;
 }
 
@@ -65,6 +65,7 @@ header{
     margin-top: 19px;
     font-family: Prompt;
     font-size: 23px;
+    margin-top: 30px;
 }
 
 .menu{
@@ -111,8 +112,8 @@ header{
 
 
 .product-card {
-    background: #ffffff;
-    border: solid 1px #000000;
+    background: #eaeaea;
+    /*border: solid 1px #000000;*/
     width: 250px;
     height: 350px;
     display: flex;
@@ -134,7 +135,7 @@ header{
     margin-bottom: 15px;
 }
 .product-name {
-    font-size: 18px;
+    font-size: 23px;
     font-weight: bold;
     font-family: Prompt;
 }
@@ -145,6 +146,11 @@ header{
     background: none;
     cursor: pointer;
     font-family: Prompt;
+    border: solid 2px #000000;
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 3px 5px #000000;
+    
 }
 
 button {
@@ -220,10 +226,39 @@ button {
     .menu {
         flex-direction: column;
         align-items: center;
+        margin-left: 40px;
     }
     
     .menu_list {
         font-size: 18px;
         padding: 5px;
+    }
+
+    .product-name {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Prompt;
+    }
+
+    .product-price {
+        font-size: 16px;
+        color: #000000;
+        /*margin-top: 5px;*/
+        background: none;
+        cursor: pointer;
+        font-family: Prompt;
+        border: solid 2px #000000;
+        border-radius: 12px;
+        padding: 3px;
+        box-shadow: 3px 5px #000000;
+        
+    }
+
+    .product-image {
+        width: 80%;
+        height: 50%;
+        background: #33333364;
+        border-radius: 8px;
+        margin-bottom: 15px;
     }
 }
