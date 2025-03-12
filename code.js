@@ -37,15 +37,3 @@ openModalBtns.forEach(btn => {
         modal.style.display = "flex";
     });
 });
-
-// Закрываем модальное окно (по нажатию на кнопку "×")
-closeModal.addEventListener("click", () => {
-    modal.style.display = "none";
-});
-
-// Закрываем модальное окно (по клику вне окна)
-window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-});

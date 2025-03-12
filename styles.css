@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 
 *{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden
 }
 
 
@@ -47,7 +48,7 @@ body{
 
 header{
     background-color: #ffffff;
-    height: 50vh;
+    height: 70vh;
 }
 
 .logo{
@@ -56,22 +57,21 @@ header{
 }
 
 .icon_logo{
-    max-width: 60px;
-    height: 60px;
-    margin: 15px;
+    max-width: 120px;
+    height: 80px;
+    margin: 10px;
 }
 
 .name_logo{
-    margin-top: 19px;
-    font-family: Prompt;
-    font-size: 23px;
-    margin-top: 30px;
+    font-family: Kanit;
+    font-size: 32px;
+    margin-top: 21px;
 }
 
 .menu{
     display: flex;
     justify-content: flex-end;
-    margin-top: -57px;
+    margin-top: -80px;
     margin-right: 30px;
 }
 
@@ -101,8 +101,16 @@ header{
     font-size: 80px;
 }
 
-.product_table
-{
+.title_3{
+    font-family: Kanit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -62px;
+    font-size: 80px;
+}
+
+.product_table{
     display: flex;
     justify-content: space-evenly;
     margin-top: 50px;
@@ -114,8 +122,8 @@ header{
 .product-card {
     background: #eaeaea;
     /*border: solid 1px #000000;*/
-    width: 250px;
-    height: 350px;
+    width: 220px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -189,11 +197,12 @@ button {
         font-size: 70px;
         margin-top: -90px;
     }
-    
-    .product_list_1, .product_list_2 {
-        width: 80vw;
-        height: 300px;
+
+    .title_3{
+        font-size: 70px;
+        margin-top: -50px;
     }
+    
     
     .menu {
         justify-content: center;
@@ -205,7 +214,7 @@ button {
 @media (max-width: 768px) {
 
     header{
-        height: 40vh;
+        height: 60vh;
     }
 
     .title_1 {
@@ -217,16 +226,89 @@ button {
         font-size: 50px;
         margin-top: -58px;
     }
+
+    .title_3{
+        font-size: 50px;
+        margin-top: -40px;
+    }
     
     .product-card {
-        max-width: 150px;
-        height: 240px;
+        max-width: 130px;
+        height: 220px;
     }
     
     .menu {
-        flex-direction: column;
+        flex-direction:row;
         align-items: center;
         margin-left: 40px;
+    }
+    
+    .menu_list {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .product-name {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Prompt;
+    }
+
+    .product-price {
+        font-size: 16px;
+        color: #000000;
+        /*margin-top: 5px;*/
+        background: none;
+        cursor: pointer;
+        font-family: Prompt;
+        border: solid 2px #000000;
+        border-radius: 12px;
+        padding: 3px;
+        box-shadow: 3px 5px #000000;
+        
+    }
+
+    .product-image {
+        width: 80%;
+        height: 50%;
+        background: #33333364;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 335px) {
+
+    header{
+        height: 60vh;
+    }
+
+    .title_1 {
+        font-size: 40px;
+        margin: 25px;
+    }
+
+    .title_2{
+        font-size: 40px;
+        margin-top: -58px;
+    }
+
+    .title_3{
+        font-size: 40px;
+        margin-top: -33px;
+    }
+    
+    .product-card {
+        max-width: 110px;
+        height: 200px;
+    }
+    
+    .menu {
+        flex-direction:row;
+        align-items: center;
+        margin-left: 40px;
+        font-size: 10px;
+        padding: 10px;
     }
     
     .menu_list {
