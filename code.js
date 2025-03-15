@@ -3,6 +3,43 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("preloader").style.display = "none";
         document.getElementById("content").style.display = "block";
     }, 2000);
+
+    // Получаем все элементы с классом product-card
+    const productCards = document.querySelectorAll('.product-card');
+    const popups = document.querySelectorAll('.popup');
+    
+    // Добавляем обработчик для каждой карточки товара
+    productCards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            const popup = document.getElementById(`popup_${index + 1}`);
+            if (popup) {
+                popup.classList.add('open');
+            }
+        });
+    });
+
+    // Добавляем обработчики для закрытия popup
+    document.querySelectorAll('.close-popup').forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            closeBtn.closest('.popup').classList.remove('open');
+        });
+    });
+
+    // Закрытие при клике вне контента popup
+    popups.forEach(popup => {
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('open');
+            }
+        });
+    });
+
+    // Обработчик для кнопок "Добавить в корзину"
+    document.querySelectorAll('.popup-button').forEach(button => {
+        button.addEventListener('click', () => {
+            alert('Товар добавлен в корзину!');
+        });
+    });
 });
 
 
