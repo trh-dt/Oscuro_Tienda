@@ -50,7 +50,7 @@ body{
 header{
     color: #fff;
     height: 70vh;
-    background-image: url(backrgound/_\ \(1\).jpeg);
+    background-image: url('backrgound/_ (1).jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,6 +64,7 @@ header{
 .icon_logo{
     max-width: 120px;
     height: 80px;
+    object-fit: contain;
     margin: 10px;
 }
 
@@ -76,6 +77,7 @@ header{
 .icon_menu{
     width: 30px;
     height: 30px;
+    object-fit: contain;
 }
 
 .menu{
@@ -148,8 +150,9 @@ header{
 
 .product-image {
     width: 80%;
-    height: 60%;
-    background: #33333364;
+    height: auto;
+    max-height: 60%;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
 }
