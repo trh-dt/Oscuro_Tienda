@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HTR - Магазин стильной одежды и аксессуаров. Худи, чехлы для телефонов и наушников." />
+    <meta name="keywords" content="худи, чехлы, аксессуары, одежда, HTR" />
+    <meta name="author" content="HTR" />
     <link rel="stylesheet" href="styles.css" />
-    <title>HTR</title>
+    <link rel="icon" type="image/png" href="icons/logo2.0.png" />
+    <title>HTR - Магазин стильной одежды и аксессуаров</title>
   </head>
   <body>
 
     <div id="preloader">
       <div class="custom-loader">
-          <img src="icons/logo2.0.png" alt="HTR">
+          <img src="icons/logo2.0.png" alt="HTR" loading="eager">
       </div>
   </div>
   
@@ -19,7 +23,7 @@
 
     <header>
       <div class="logo">
-        <img class="icon_logo" src="icons/logo2.0.png" alt="" />
+        <img class="icon_logo" src="icons/logo2.0.png" alt="HTR Logo" loading="eager">
       </div>
 
       <div class="menu">
@@ -27,19 +31,19 @@
           class="menu_list"
           target="_blank"
           href="https://t.me/+RGBBXixeyX00OGZi"
-          ><img class="icon_menu" src="icons/telegram.svg" alt=""></a
+          ><img class="icon_menu" src="icons/telegram.svg" alt="Telegram" loading="lazy"></a
         >
         <a
           class="menu_list"
           target="_blank"
           href="https://de.pinterest.com/anderfant98/"
-          ><img class="icon_menu" src="icons/Pinterest.svg" alt=""></a
+          ><img class="icon_menu" src="icons/Pinterest.svg" alt="Pinterest" loading="lazy"></a
         >
         <a
           class="menu_list"
           target="_blank"
           href="https://www.instagram.com/terekh.d08/"
-          ><img class="icon_menu" src="icons/instagram.svg" alt=""></a
+          ><img class="icon_menu" src="icons/instagram.svg" alt="Instagram" loading="lazy"></a
         >
       </div>
 
@@ -49,17 +53,17 @@
     </header>
 
 <div class="product_table">
-  <div class="product-card">
-    <img class="product-image" src="img_product/IMG_5927.JPG" alt="">
+  <div class="product-card" data-category="hoodies">
+    <img class="product-image" src="img_product/IMG_5927.JPG" alt="Noir Rebellion Hoodie" loading="lazy">
     <div class="product-name">Rebellion</div>
     <a href="#popup_1" class="product-price">$19.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="hoodies">
     <img class="product-image" src="img_product/IMG_5926.JPG" alt="">
     <div class="product-name">Urban Dice</div>
     <a href="#popup_2" class="product-price">$24.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" >
     <img class="product-image" src="img_product/IMG_5928.JPG" alt="">
     <div class="product-name">Neon Eclipse</div>
     <a href="#popup_3" class="product-price">$29.99</a>
@@ -69,83 +73,83 @@
     <div class="product-name">Product 4</div>
     <a href="#popup_4" class="product-price">$34.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="tshirts">
     <img class="product-image" src="img_product/IMG_5930.JPG" alt="">
     <div class="product-name">Product 5</div>
     <a href="#popup_5" class="product-price">$39.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="tshirts">
     <img class="product-image" src="img_product/IMG_5931.JPG" alt="">
     <div class="product-name">Product 6</div>
     <a href="#popup_6" class="product-price">$44.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="tshirts">
     <img class="product-image" src="img_product/IMG_5932.JPG" alt="">
     <div class="product-name">Product 7</div>
     <a href="#popup_7" class="product-price">$49.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="tshirts">
     <img class="product-image" src="img_product/IMG_5933.JPG" alt="">
     <div class="product-name">Product 8</div>
     <a href="#popup_8" class="product-price">$54.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="tshirts">
     <img class="product-image" src="img_product/IMG_5934.JPG" alt="">
     <div class="product-name">Product 9</div>
     <a href="#popup_9" class="product-price">$59.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="tshirts">
     <img class="product-image" src="img_product/IMG_5935.JPG" alt="">
     <div class="product-name">Product 10</div>
     <a href="#popup_10" class="product-price">$64.99</a>
 </div>
 
-<div class="product-card">
+<div class="product-card" data-category="cases">
   <img class="product-image" src="img_product/case_airpods_1.jpeg" alt="">
   <div class="product-name">Product 1</div>
   <a href="#popup_11" class="product-price">$19.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="cases">
   <img class="product-image" src="img_product/case_airpods_2.jpeg" alt="">
   <div class="product-name">Product 2</div>
   <a href="#popup_12" class="product-price">$24.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="cases">
   <img class="product-image" src="img_product/case_airpods_3.jpeg" alt="">
   <div class="product-name">Product 3</div>
   <a href="#popup_13" class="product-price">$29.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="cases">
   <img class="product-image" src="img_product/case_iphone_1.jpeg" alt="">
   <div class="product-name">Product 4</div>
   <a href="#popup_14" class="product-price">$34.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="cases">
   <img class="product-image" src="img_product/case_iphone_2.jpeg" alt="">
   <div class="product-name">Product 5</div>
   <a href="#popup_15" class="product-price">$39.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="cases">
   <img class="product-image" src="img_product/case_iphone_3.jpeg" alt="">
   <div class="product-name">Product 6</div>
   <a href="#popup_16" class="product-price">$44.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="cases">
   <img class="product-image" src="img_product/case_iphone_4.jpeg" alt="">
   <div class="product-name">Product 7</div>
   <a href="#popup_17" class="product-price">$49.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="cases">
   <img class="product-image" src="img_product/case_iphone_5.jpeg" alt="">
   <div class="product-name">Product 8</div>
   <a href="#popup_18" class="product-price">$54.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="cases">
   <img class="product-image" src="img_product/case_iphone_6.jpeg" alt="">
   <div class="product-name">Product 9</div>
   <a href="#popup_19" class="product-price">$59.99</a>
 </div>
-<div class="product-card">
+<div class="product-card" data-category="cases">
   <img class="product-image" src="img_product/case_airpodsmax_1.jpeg" alt="">
   <div class="product-name">Product 10</div>
   <a href="#popup_20" class="product-price">$64.99</a>
@@ -200,6 +204,6 @@
   </div>
 </div>
 
-    <script src="code.js"></script>
+    <script src="code.js" defer></script>
   </body>
 </html>
