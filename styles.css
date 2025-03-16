@@ -39,20 +39,21 @@
 }
 
 body{
-    background-color: #000000;
-    color: rgb(0, 0, 0);
     background-color: #ffffff;
-    color: rgb(0, 0, 0);
     font-family: Arial, sans-serif;
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 header{
-    background-color: #ffffff;
+    color: #fff;
     height: 70vh;
+    background-image: url(_\ \(1\).jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .logo{
@@ -72,6 +73,11 @@ header{
     margin-top: 21px;
 }
 
+.icon_menu{
+    width: 30px;
+    height: 30px;
+}
+
 .menu{
     display: flex;
     justify-content: flex-end;
@@ -80,6 +86,7 @@ header{
 }
 
 .menu_list{
+    
     padding: 10px;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -117,7 +124,7 @@ header{
 .product_table{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 20vh;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -296,8 +303,8 @@ button {
     
     
     .menu {
-        justify-content: center;
-        margin-top: 10px;
+        justify-content: flex-end;
+        margin-top: -70px;
     }
 
     .popup-content {
@@ -323,6 +330,7 @@ button {
 
     header{
         height: 60vh;
+        background-image: url(_\ \(2\).jpeg);
     }
 
     .title_1 {
