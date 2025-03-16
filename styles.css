@@ -48,9 +48,9 @@ body{
 }
 
 header{
-    color: #fff;
+    color: #ffffff;
     height: 70vh;
-    background-image: url('backrgound/_\(1\).jpeg');
+    background-image: url(backrgound/9.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -306,7 +306,7 @@ button {
     
     
     .menu {
-        justify-content: flex-end;
+        justify-content: center;
         margin-top: -70px;
     }
 
@@ -332,8 +332,12 @@ button {
 @media (max-width: 768px) {
 
     header{
-        height: 60vh;
-        background-image: url('backrgound/_\(2\).jpeg');
+        height: 70vh;
+        background-image: url(backrgound/9_2.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
     }
 
     .title_1 {
@@ -365,6 +369,7 @@ button {
     .menu_list {
         font-size: 18px;
         padding: 5px;
+        
     }
 
     .product-name {
