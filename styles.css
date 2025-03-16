@@ -50,7 +50,7 @@ body{
 header{
     color: #fff;
     height: 70vh;
-    background-image: url('backrgound/_ (1).jpeg');
+    background-image: url(backrgound/_\(1\).jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -333,7 +333,7 @@ button {
 
     header{
         height: 60vh;
-        background-image: url(backrgound/_\ \(2\).jpeg);
+        background-image: url(backrgound/_\(2\).jpeg);
     }
 
     .title_1 {
