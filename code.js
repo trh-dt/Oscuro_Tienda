@@ -301,3 +301,59 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+function showAlert(message, type = 'default', duration = 3000) {
+    // Создаем элемент уведомления
+    const alert = document.createElement('div');
+    alert.className = `alert ${type}`;
+    
+    // Добавляем иконку в зависимости от типа
+    let icon = '';
+    switch(type) {
+        case 'success':
+            icon = '✓';
+            break;
+        case 'error':
+            icon = '✕';
+            break;
+        case 'warning':
+            icon = '⚠';
+            break;
+        default:
+            icon = 'ℹ';
+    }
+    
+    // Создаем содержимое уведомления
+    alert.innerHTML = `
+        <span class="alert-icon">${icon}</span>
+        <span class="alert-message">${message}</span>
+        <span class="alert-close"></span>
+    `;
+    
+    // Добавляем уведомление на страницу
+    document.body.appendChild(alert);
+    
+    // Активируем анимацию появления
+    setTimeout(() => alert.classList.add('show'), 100);
+    
+    // Добавляем обработчик для кнопки закрытия
+    const closeBtn = alert.querySelector('.alert-close');
+    closeBtn.addEventListener('click', () => {
+        alert.classList.remove('show');
+        setTimeout(() => alert.remove(), 300);
+    });
+    
+    // Автоматически скрываем уведомление через указанное время
+    setTimeout(() => {
+        if (alert.classList.contains('show')) {
+            alert.classList.remove('show');
+            setTimeout(() => alert.remove(), 300);
+        }
+    }, duration);
+}
+
+// Примеры использования:
+// showAlert('Товар добавлен в корзину', 'success');
+// showAlert('Произошла ошибка', 'error');
+// showAlert('Внимание!', 'warning');
+// showAlert('Обычное уведомление');
