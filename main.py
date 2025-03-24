@@ -56,7 +56,7 @@ async def help_cmd(message: types.Message):
 @dp.callback_query()
 async def handle_callback(callback: types.CallbackQuery):
     if callback.data == "catalog":
-        await callback.message.answer("📦 Каталог: https://t.me/your_bot?start=shop")
+        await callback.message.answer("📦 Каталог: https://t.me/oscuro_tienda_bot")
     elif callback.data == "contacts":
         await callback.message.answer("📞 Контакты:\nТелеграм: @estilo_01")
 
