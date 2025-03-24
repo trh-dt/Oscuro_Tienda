@@ -35,7 +35,7 @@ shop_inline_keyboard = InlineKeyboardMarkup(
 # Команда /start
 @dp.message(Command("start"))
 async def start(message: types.Message):
-    await message.answer("Привет! Добро пожаловать в Oscuro Tienda! Выберите действие:", reply_markup=menu_keyboard)
+    await message.answer("Привет! Добро пожаловать в HTR Shop! Выберите действие:", reply_markup=menu_keyboard)
 
 # Обработка кнопки "Каталог"
 @dp.message(lambda message: message.text == "📦 Каталог")
